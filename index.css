@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
+:root{
+    --body-bg: hsl(0, 0%, 11%);
+    --white: hsl(0, 0%, 89%);
+    --app-bg: hsl(0, 0%, 6%);
+    --green: hsl(120, 100%, 71%);
+    --blue: hsl(249, 100%, 71%);
+    --red: hsl(0, 100%, 71%);
+}
+
+*{
+    margin: 0; padding: 0;
+    border: 0; outline: 0;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--app-bg);
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: var(--white);
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--green);
+}
+
+body{
+    height: 100vh;
+    background-color: var(--body-bg);
+    padding: 1rem;
+    overflow: hidden;
+}
+
+hr{
+    height: 0.1rem;
+    background-color: var(--body-bg);
+}
+
+.container{
+    height: 400px;
+    overflow-y: scroll;
+    margin-top: 1rem;
+}
+
+/*APP*/
+#app{
+    max-height: 500px;
+    max-width: 900px;
+    margin: 1rem auto 0;
+    padding: 2rem;
+    background-color: var(--app-bg);
+    border-radius: 1rem;
+}
+
+#app .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#app h1{
+    color: var(--white);
+}
+
+#app .task-counter{
+    color: var(--white);
+}
+
+#app .task-form{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+#app .task-form input[type="text"]{
+    flex: 1;
+    padding: 0.5rem;
+    background-color: var(--body-bg);
+    color: var(--white);
+    border-radius: 1rem;
+}
+
+#app .task-form input[type="text"]:focus{
+    outline: 0.2rem solid var(--green);
+}
+
+#app .task-form input[type="submit"]{
+    background-color: var(--green);
+    padding: 0.6rem;
+    color: var(--app-bg);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+#app .tasks{
+    margin-top: 0.5rem;
+}
+
+#app .tasks .task{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 0.2rem solid var(--body-bg);
+}
+
+#app .tasks .task input[type="text"]{
+    padding: 0.5rem;
+    flex: 1;
+    overflow-x: scroll;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+#app .tasks .task .task-btn{
+    display: flex;
+    gap: 0.7rem;
+    margin-right: 0.5rem;
+}
+
+#app .tasks .task button{
+    padding: 0.6rem;
+    color: var(--app-bg);
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+#app .tasks .task button.edit{
+    background-color: var(--blue);
+}
+
+#app .tasks .task button.delete{
+    background-color: var(--red);
+}
+
+@media screen and (max-width: 480px){
+    #app .task-form{
+        flex-direction: column;
+    }
+}
