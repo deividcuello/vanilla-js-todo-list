@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
       taskValue.type = "text";
       taskValue.value = newTask;
       taskValue.setAttribute("readonly", "readonly");
-      taskValue.autocomplete = "of";
+      taskValue.autocomplete = "off";
       task.appendChild(taskValue);
 
       const taskBtn = document.createElement("div");
@@ -77,6 +77,7 @@ window.addEventListener("load", () => {
     while (tasks.firstChild) {
         tasks.removeChild(tasks.firstChild);
     }
+    taskCounter.innerText = `Tareas: ${tasks.childElementCount}`;
 
   });
 });
