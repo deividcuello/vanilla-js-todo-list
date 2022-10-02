@@ -41,13 +41,16 @@ html{
 body{
     height: 100vh;
     background-color: var(--body-bg);
-    padding: 1rem;
+    padding: 2rem;
     overflow: hidden;
 }
 
-hr{
-    height: 0.1rem;
-    background-color: var(--body-bg);
+button{
+    padding: 0.6rem;
+    color: var(--app-bg);
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 1rem;
 }
 
 .container{
@@ -58,9 +61,9 @@ hr{
 
 /*APP*/
 #app{
-    max-height: 500px;
+    max-height: fit-content;
     max-width: 900px;
-    margin: 1rem auto 0;
+    margin: 0 auto;
     padding: 2rem;
     background-color: var(--app-bg);
     border-radius: 1rem;
@@ -138,20 +141,18 @@ hr{
     margin-right: 0.5rem;
 }
 
-#app .tasks .task button{
-    padding: 0.6rem;
-    color: var(--app-bg);
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 1rem;
-}
-
 #app .tasks .task button.edit{
     background-color: var(--blue);
 }
 
 #app .tasks .task button.delete{
     background-color: var(--red);
+}
+
+#app .delete-all{
+    margin-top: 1rem;
+    background-color: var(--red);
+    display: none;
 }
 
 @media screen and (max-width: 480px){
